@@ -1,0 +1,14 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+
+# Visual Studio
+.vs/
+
+# Frontend
+node_modules/
+dist/
+.env
+.DS_Store
