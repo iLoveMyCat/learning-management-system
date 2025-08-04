@@ -26,3 +26,9 @@ http://localhost:5000
 - Controllers → Services → Repositories → In-Memory Storage
 - Each layer has a single responsibility.
 - All API input/output uses DTOs - Internal models remain encapsulated
+
+## Testing
+
+- Unit test is written using **xUnit** with **Moq** for mocking
+- Sample test is included for `CourseService.CreateCourse`
+- Focus is on verifying service logic and repository interaction
