@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTeacher", "eTeacher\eTeacher.csproj", "{7F3B93C2-814A-46BF-9C21-71B01CA09CCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTeacher.Tests", "eTeacher.Tests\eTeacher.Tests.csproj", "{BADE74FE-C70A-4BA4-B7B8-80A5AC822F3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7F3B93C2-814A-46BF-9C21-71B01CA09CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F3B93C2-814A-46BF-9C21-71B01CA09CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F3B93C2-814A-46BF-9C21-71B01CA09CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BADE74FE-C70A-4BA4-B7B8-80A5AC822F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BADE74FE-C70A-4BA4-B7B8-80A5AC822F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BADE74FE-C70A-4BA4-B7B8-80A5AC822F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BADE74FE-C70A-4BA4-B7B8-80A5AC822F3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
