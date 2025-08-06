@@ -25,6 +25,22 @@ namespace eTeacher
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            // CROS
+            var allowedOrigins = new[] 
+            { 
+                "http://localhost:8080",  
+                "http://127.0.0.1:8080",
+            };
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AppCors", policy =>
+                {
+                    policy.WithOrigins(allowedOrigins)
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials();
+                });
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -35,6 +51,8 @@ namespace eTeacher
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("AppCors");
 
             app.UseAuthorization();
 
