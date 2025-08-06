@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Learning Managment System - Enrollments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./assets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Learning Managment System</h1>
+      <nav class="nav">
+        <a href="./index.html">Courses</a>
+        <a href="./enrollments.html" aria-current="page">Enrollments</a>
+        <a href="./reports.html">Reports</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>Enrollments</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Course</th>
+            </tr>
+          </thead>
+          <tbody id="enrollments-tbody">
+            <tr>
+              <td colspan="2">Loading…</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h3>Assign Student to Course</h3>
+        <form id="enrollment-form">
+          <div class="field">
+            <label for="studentId">Student <span class="req">*</span></label>
+            <select id="studentId" required>
+              <option value="">-- select --</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="courseId">Course <span class="req">*</span></label>
+            <select id="courseId" required>
+              <option value="">-- select --</option>
+            </select>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Assign</button>
+          </div>
+          <p id="enroll-error" class="error"></p>
+          <p id="enroll-message" class="success"></p>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="./pages/enrollments.js"></script>
+  </body>
+</html>
