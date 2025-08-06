@@ -32,3 +32,26 @@ http://localhost:5000
 - Unit test is written using **xUnit** with **Moq** for mocking
 - Sample test is included for `CourseService.CreateCourse`
 - Focus is on verifying service logic and repository interaction
+
+### Frontend (UI)
+
+Minimal full-stack Learning Management Dashboard frontend. Built with HTML5, CSS3, and object-oriented JavaScript. Connects to the .NET Core backend API to manage courses, students, and enrolments.
+
+## Setup Instructions
+
+Requirements: Simple HTTP server to serve local static files (npm i http-server)
+
+```bash
+# From project root
+cd lms-dashboard
+# Using npm's http-server (or similar)
+npx http-server -p 8080
+
+Configuration:
+API base URL is set in core/config.js
+
+## Architecture and Design Decisions
+- Frontend (HTML/CSS/JS)
+- Structure: Pages control UI, Services handle API calls, Core manages config & HTTP wrapper.
+- Single Responsibility, OOP ES6 classes, lightweight responsive UI.
+```
