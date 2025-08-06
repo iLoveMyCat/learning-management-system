@@ -1,5 +1,5 @@
 ﻿using eTeacher.DTOs.Courses;
-using eTeacher.Services;
+using eTeacher.Services.Interfaces;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 

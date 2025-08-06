@@ -1,5 +1,6 @@
 ﻿using eTeacher.DTOs.Students;
 using eTeacher.Services;
+using eTeacher.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eTeacher.Controllers

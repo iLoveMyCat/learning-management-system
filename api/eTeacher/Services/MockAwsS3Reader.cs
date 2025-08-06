@@ -1,4 +1,6 @@
-﻿namespace eTeacher.Services
+﻿using eTeacher.Services.Interfaces;
+
+namespace eTeacher.Services
 {
     public class MockAwsS3Reader : IAwsS3Reader
     {

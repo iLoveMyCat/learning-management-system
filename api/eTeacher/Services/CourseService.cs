@@ -1,6 +1,7 @@
 ﻿using eTeacher.DTOs.Courses;
 using eTeacher.Models;
 using eTeacher.Repositories;
+using eTeacher.Services.Interfaces;
 
 namespace eTeacher.Services
 {

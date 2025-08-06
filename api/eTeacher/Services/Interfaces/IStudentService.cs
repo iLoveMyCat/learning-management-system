@@ -1,6 +1,6 @@
 ﻿using eTeacher.DTOs.Students;
 
-namespace eTeacher.Services
+namespace eTeacher.Services.Interfaces
 {
     public interface IStudentService
     {

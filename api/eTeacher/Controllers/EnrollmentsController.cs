@@ -1,5 +1,5 @@
 ﻿using eTeacher.DTOs.Enrollments;
-using eTeacher.Services;
+using eTeacher.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eTeacher.Controllers

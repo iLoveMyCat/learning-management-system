@@ -1,6 +1,6 @@
 ﻿using eTeacher.DTOs.Enrollments;
 
-namespace eTeacher.Services
+namespace eTeacher.Services.Interfaces
 {
     public interface IEnrollmentService
     {

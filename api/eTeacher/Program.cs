@@ -1,6 +1,7 @@
 
 using eTeacher.Repositories;
 using eTeacher.Services;
+using eTeacher.Services.Interfaces;
 
 namespace eTeacher
 {
