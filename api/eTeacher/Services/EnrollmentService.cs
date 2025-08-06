@@ -55,5 +55,24 @@ namespace eTeacher.Services
                 CourseTitle = _courseRepository.GetById(dto.CourseId)?.Title
             };
         }
+        public IEnumerable<EnrollmentReportDto> GetEnrollmentReport()
+    {
+            var enrollments = _enrollmentRepository.GetAll();
+
+            // Group enrollments by courseId
+            var grouped = enrollments
+                .GroupBy(e => e.CourseId)
+                .Select(group =>
+                {
+                    var course = _courseRepository.GetById(group.Key); 
+                    return new EnrollmentReportDto
+                    {
+                        CourseTitle = course?.Title ?? "Unknown",
+                        TotalStudents = group.Count()
+                    };
+                });
+
+            return grouped;
+        }
     }
 }

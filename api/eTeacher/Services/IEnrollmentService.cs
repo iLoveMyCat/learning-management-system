@@ -6,6 +6,7 @@ namespace eTeacher.Services
     {
         IEnumerable<EnrollmentReadDto> GetAllEnrollments();
         EnrollmentReadDto EnrollStudent(EnrollmentCreateDto dto);
+        public IEnumerable<EnrollmentReportDto> GetEnrollmentReport();
     }
 
 }

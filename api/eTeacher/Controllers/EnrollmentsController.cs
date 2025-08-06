@@ -27,5 +27,12 @@ namespace eTeacher.Controllers
             var result = _enrollmentService.EnrollStudent(dto);
             return CreatedAtAction(nameof(GetAll), new { id = result.Id }, result);
         }
+
+        [HttpGet("enrollment-summary")]
+        public ActionResult<IEnumerable<EnrollmentReportDto>> GetEnrollmentReport()
+        {
+            var report = _enrollmentService.GetEnrollmentReport();
+            return Ok(report);
+        }
     }
 }
