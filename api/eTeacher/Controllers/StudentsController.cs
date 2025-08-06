@@ -15,6 +15,16 @@ namespace eTeacher.Controllers
             _studentService = studentService;
         }
 
+        //Downloads a mocked students file from S3 and preloads it into the in-memory repository
+        public record PreloadRequest(string Key);
+        [HttpPost("preload-from-s3")]
+        public async Task<IActionResult> PreloadFromS3([FromBody] PreloadRequest req, CancellationToken ct)
+        {
+            if (string.IsNullOrWhiteSpace(req.Key)) return BadRequest("Key is required.");
+            var count = await (_studentService as StudentService)!.PreloadFromS3Async(req.Key, ct);
+            return Ok(new { imported = count, key = req.Key });
+        }
+
         [HttpGet]
         public ActionResult<IEnumerable<StudentReadDto>> GetAll()
         {

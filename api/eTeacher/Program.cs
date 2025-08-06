@@ -19,6 +19,8 @@ namespace eTeacher
             builder.Services.AddScoped<IStudentService, StudentService>();
             builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
 
+            // Mock AWS s3 reader 
+            builder.Services.AddSingleton<IAwsS3Reader, MockAwsS3Reader>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
